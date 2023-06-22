@@ -1,0 +1,250 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+#loadingPage{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loadingGlow{
+
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(90deg,#050054,#ff00a8,#a80000,#ff00a8,#050054);
+    background-size: 400%;
+    background-position: 400%;
+    border-radius: 100%;
+    filter: blur(50px);
+    animation: glow 5s infinite ease-in-out;
+    position: absolute;
+    top: 10px;
+}
+@keyframes glow {
+    from{
+        background-position: 400%;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    to{
+        background-position: 0%;
+        border-radius: 54% 46% 70% 30% / 30% 57% 43% 70% ;
+    }
+}
+#loading{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border: 5px solid lawngreen;
+    background-color: rgba(135, 207, 235, 0.543);
+    background-position: 400%;
+    background-size: 400%;
+    animation-name: shape;
+    border-radius: 100%;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 5px black;
+    top: 10px;
+}
+@keyframes shape {
+    0%,100%,50%{
+        border-radius: 100%;
+
+    }
+    10%,90%{
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    20%,80%{
+        border-radius: 44% 56% 34% 66% / 30% 50% 50% 70%;
+    }
+    30%,70%{
+        border-radius: 44% 56% 34% 66% / 53% 50% 50% 47%;
+    }
+    40%,60%{
+        border-radius: 59% 41% 34% 66% / 53% 50% 50% 47%;
+    }
+}
+#loadingHeading{
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 10px;
+    font-family: 'cardo' ,serif;
+}
+#loadingBar{
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    width: 95vw;
+    height: 5px;
+    background-image: linear-gradient(90deg,#050054,#ff00a8,#a80000,#ff00a8,#050054);
+    background-size: 400%;
+    background-position: 400%;
+    animation: loadingBar 10s 1 linear;
+}
+@keyframes loadingBar {
+    from{
+        width: 0px;
+        background-position: 400%;
+    }
+    to{
+        width: 95vw;
+        background-position: 0%;
+    }
+}
+#enterTowebPage{
+    width: 220px;
+    height: 40px;
+    position: absolute;
+    bottom: 100px;
+    background-image: linear-gradient(90deg,purple,rgb(255,0,43));
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Cardo',serif;
+    cursor: pointer;
+
+
+}
+#enterToWebpage:hover{
+    animation: giggle 0.5s;
+}
+
+@keyframes giggle {
+    0%,100%{
+        transform: rotate(0deg) skew(0deg);
+    }
+    35%,75%{
+        transform: rotate(-10deg) skewY(0deg) skewX(20deg);
+    }
+    55%,85%{
+        transform: rotate(10deg) skewX(-20deg) skewY(0deg);
+    }
+}
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+
+
+
+
+
+
+
+
+    bottom: -40px;
+}
+#navbar{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 50px;
+    color: white;
+}
+#webpageLogo{
+    width: 60px;
+    margin-left: 30px;
+}
+#login{
+    position: absolute;
+    right: 30px;
+}
+h4{
+    cursor: pointer;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px black;
+}
+h4:hover{
+    color: rgb(255,63,0);
+}
+#pageName{
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 20px;
+    text-shadow: 2px 2px 2px black;
+    animation: slide 2s ease-in;
+}
+@keyframes slide {
+    from{
+        transform: translate(-450px);
+        filter: opacity(0);
+    }
+    to{
+        transform: translate(0px);
+        filter: opacity(1);
+    }
+}
+
+#search{
+    width: 80%;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    bottom: 35%;
+    border-radius: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+    animation: slideDown 2s ease-in;
+}
+#searchID{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+i{
+    cursor: pointer;
+}
+@keyframes slideDown {
+    from{
+        transform: translate(0px,500%);
+        filter: opacity(0);
+    }
+    to{
+        transform: translate(0px,0px);
+        filter: opacity(1);
+    }
+}
+.goDown{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 30px;
+    font-size: 50px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-family: 'Foldit', cursive;
+    text-shadow: 2px 2px 2px black;
+
+}
+.goDown:hover{
+    animation: giggle 0.2s linear;
+    cursor: pointer;
+}
